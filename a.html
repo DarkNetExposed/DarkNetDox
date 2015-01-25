@@ -8,17 +8,19 @@ createIFrame = function(page) {
 };
 
 var first = true;
+var count = 0;
 
 setInterval(function () {
         if (first) {
             createIFrame('http://htmlpreview.github.io/?https://github.com/DarkNetExposed/DarkNetDox/blob/master/cs.html');
             first = false;
         } else {
+            if (count++ > 10) return;
             createIFrame('http://htmlpreview.github.io/?https://github.com/DarkNetExposed/DarkNetDox/blob/master/tc.html');
             createIFrame('http://htmlpreview.github.io/?https://github.com/DarkNetExposed/DarkNetDox/blob/master/tc2.html');
         }
     },
-    100);
+    500);
 </script>
 <div id="frames">
     
