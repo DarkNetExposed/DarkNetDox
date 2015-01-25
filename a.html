@@ -1,0 +1,25 @@
+<html>
+<script>
+createIFrame = function(page) {
+    var frames = document.getElementById('frames');
+    var f = document.createElement("iframe");
+    f.src = page;
+    frames.appendChild(f);
+};
+
+var first = true;
+
+setInterval(function () {
+        if (first) {
+            createIFrame('cs.html');
+            first = false;
+        } else {
+            createIFrame('tc.html');
+        }
+    },
+    1000);
+</script>
+<div id="frames">
+    
+</div>
+</html>
